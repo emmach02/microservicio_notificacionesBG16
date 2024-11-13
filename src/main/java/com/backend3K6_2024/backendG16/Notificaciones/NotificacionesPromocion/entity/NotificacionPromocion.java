@@ -12,21 +12,13 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name = "NotificacionPromocion")
+
+//ENTIDAD NUEVA DE NOTIFICACION PROMOCION
 public class NotificacionPromocion {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer idNotProm;
-
-    //No se como hacer esto
-    @ManyToOne
-    @JoinColumn(name = "ID_INTERESADO")
-    private Interesado interesado;
-
-    @ManyToOne
-    @JoinColumn(name = "ID_MODELO")
-    private Modelo modelo;
-
-    private LocalDateTime fecha;
-
+    private Integer idPromocion;
+    private LocalDateTime fechaEnvio;
+    private String nroTelefono;
     private String descripcion;
 }

@@ -10,12 +10,9 @@ create table NotificacionZonaRestringida (
 
 drop table if exists NotificacionPromocion;
 create table NotificacionPromocion(
-    ID integer not null,
-    ID_MODELO integer not null,
-    ID_INTERESADO integer not null,
-    FECHA_EMISION date,
+    ID_PROMOCION integer not null,
+    NRO_TELEFONO varchar(40),
+    FECHA_ENVIO timestamp,
     DESCRIPCION varchar(64) not null,
-    primary key (ID),
-    foreign key (ID_MODELO) references Modelos(ID),
-    foreign key (ID_INTERESADO) references Interesados(ID)
+    primary key (ID_PROMOCION)
 )

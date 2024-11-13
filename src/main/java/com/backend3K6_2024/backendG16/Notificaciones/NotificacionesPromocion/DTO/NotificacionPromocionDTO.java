@@ -14,8 +14,6 @@ import java.time.LocalDateTime;
 @ToString
 public class NotificacionPromocionDTO {
     Integer idNotProm;
-    Interesado interesado;
-    Modelo modelo;
     LocalDateTime fecha;
     String descripcion;
 }
