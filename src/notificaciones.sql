@@ -1,5 +1,5 @@
-drop table if exists NotificacionZonaRestringida;
-create table NotificacionZonaRestringida (
+drop table if exists NotificacionInfraccion;
+create table NotificacionInfraccion (
     ID integer not null,
     ID_PRUEBA integer not null,
     FECHA_EMISION date,

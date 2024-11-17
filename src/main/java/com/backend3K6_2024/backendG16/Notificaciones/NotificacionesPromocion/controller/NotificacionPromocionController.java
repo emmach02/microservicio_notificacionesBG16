@@ -3,6 +3,7 @@ package com.backend3K6_2024.backendG16.Notificaciones.NotificacionesPromocion.co
 import com.backend3K6_2024.backendG16.Notificaciones.NotificacionesPromocion.DTO.NotPromocionReqDTO;
 import com.backend3K6_2024.backendG16.Notificaciones.NotificacionesPromocion.DTO.NotificacionPromocionDTO;
 import com.backend3K6_2024.backendG16.Notificaciones.NotificacionesPromocion.service.NotificacionPromocionService;
+import jakarta.transaction.Transactional;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -30,6 +31,7 @@ public class NotificacionPromocionController {
         return ResponseEntity.ok(notificacionPromocionService.getAll());
     }
 
+    @Transactional
     @PostMapping("/enviarNotProm")
     public ResponseEntity<String> create(@RequestBody NotPromocionReqDTO reqDTO){
         try {
