@@ -14,6 +14,7 @@ import java.time.LocalDateTime;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.ArrayList;
@@ -36,7 +37,7 @@ public class NotificacionPromocionService {
     }
 
     //Post de notificaciones, es como un enviar notificaciones
-    public ResponseEntity<String> create(NotPromocionReqDTO body) throws BadRequestException {
+    public ResponseEntity<String> create( NotPromocionReqDTO body) throws BadRequestException {
         List<String> nrosTelefonos = body.getNrosTelefono();
         if (nrosTelefonos == null || nrosTelefonos.isEmpty()) {
             throw new BadRequestException("Debe enviar al menos un telefono a notificar");
